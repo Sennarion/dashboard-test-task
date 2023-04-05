@@ -3,9 +3,7 @@ import searchIcon from 'assets/icons/search-icon.svg';
 
 export const StyledFilter = styled.div`
   position: relative;
-  max-width: 216px;
   width: 100%;
-  margin-right: 14px;
 
   &::before {
     content: '';
@@ -19,6 +17,11 @@ export const StyledFilter = styled.div`
     background-image: url(${searchIcon});
     background-position: center;
     background-repeat: no-repeat;
+  }
+
+  @media screen and (min-width: ${({ theme }) => theme.media.desktop}) {
+    max-width: 216px;
+    margin-right: 14px;
   }
 `;
 

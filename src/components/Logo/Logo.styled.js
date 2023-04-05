@@ -5,8 +5,11 @@ export const StyledLogo = styled.a`
   align-items: center;
   gap: 8px;
   color: ${({ theme }) => theme.colors.black};
-  margin-bottom: 52px;
   cursor: pointer;
+
+  @media screen and (min-width: ${({ theme }) => theme.media.desktop}) {
+    margin-bottom: 52px;
+  }
 `;
 
 export const LogoIcon = styled.svg`

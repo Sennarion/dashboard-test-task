@@ -3,6 +3,11 @@ import styled from 'styled-components';
 export const PaginationList = styled.ul`
   display: flex;
   gap: 12px;
+  margin-bottom: 20px;
+
+  @media screen and (min-width: ${({ theme }) => theme.media.desktop}) {
+    margin-bottom: 0;
+  }
 `;
 
 export const PaginationItem = styled.li`
