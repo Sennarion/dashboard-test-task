@@ -17,6 +17,8 @@ export const theme = Object.freeze({
     activeStatusBorderColor: '#00B087',
     inactiveStatusColor: '#FFC5C5',
     inactiveStatusBorderColor: '#DF0404',
+    activeStatusTextColor: '#008767',
+    tableBorderColor: '#EEEEEE',
   },
   fonts: {
     main: 'Poppins, sans-serif',
