@@ -19,6 +19,7 @@ export const theme = Object.freeze({
     inactiveStatusBorderColor: '#DF0404',
     activeStatusTextColor: '#008767',
     tableBorderColor: '#EEEEEE',
+    paginationButtonColor: '#F5F5F5',
   },
   fonts: {
     main: 'Poppins, sans-serif',
@@ -36,8 +37,11 @@ export const theme = Object.freeze({
     medium: 500,
     semiBold: 600,
   },
-  lineHeight: {
-    regular: 1.7,
+  lineHeight: (num1, num2) => num1 / num2,
+  letterSpacing: {
+    high: '0.01em',
+    normal: '0em',
+    low: '-0.01em',
   },
   spacing: value => `${4 * value}px`,
   animation: {

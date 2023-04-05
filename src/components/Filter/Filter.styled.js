@@ -3,6 +3,9 @@ import searchIcon from 'assets/icons/search-icon.svg';
 
 export const StyledFilter = styled.div`
   position: relative;
+  max-width: 216px;
+  width: 100%;
+  margin-right: 14px;
 
   &::before {
     content: '';
@@ -20,11 +23,16 @@ export const StyledFilter = styled.div`
 `;
 
 export const Input = styled.input`
+  width: 100%;
   padding: 10px;
   padding-left: 40px;
   border: none;
   border-radius: 10px;
   background-color: ${({ theme }) => theme.colors.inputColor};
+  font-size: ${({ theme }) => theme.fontSizes.tiny};
+  font-weight: ${({ theme }) => theme.fontWeight.regular};
+  line-height: ${({ theme }) => theme.lineHeight(18, 12)};
+  letter-spacing: ${({ theme }) => theme.letterSpacing.low};
   color: ${({ theme }) => theme.colors.inputTextColor};
   outline: transparent;
 

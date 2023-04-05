@@ -13,11 +13,15 @@ export const Avatar = styled.img`
 export const Content = styled.div``;
 
 export const Name = styled.p`
+  line-height: ${({ theme }) => theme.lineHeight(21, 14)};
+  letter-spacing: ${({ theme }) => theme.letterSpacing.high};
   color: ${({ theme }) => theme.colors.black};
-  line-height: 1;
+  margin-bottom: -2px;
 `;
 
 export const Position = styled.span`
   font-size: ${({ theme }) => theme.fontSizes.tiny};
+  line-height: ${({ theme }) => theme.lineHeight(18, 12)};
+  letter-spacing: ${({ theme }) => theme.letterSpacing.high};
   color: ${({ theme }) => theme.colors.userDescColor};
 `;

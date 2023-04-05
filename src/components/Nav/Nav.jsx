@@ -29,9 +29,11 @@ export default function Nav() {
               </NavItemIcon>
               <NavItemText>{title}</NavItemText>
             </NavItemContent>
-            <NavItemArrow width="16" height="16">
-              <use href={`${icons}#icon-chevron`}></use>
-            </NavItemArrow>
+            {idx !== 0 && (
+              <NavItemArrow width="16" height="16">
+                <use href={`${icons}#icon-chevron`}></use>
+              </NavItemArrow>
+            )}
           </NavItem>
         ))}
       </NavList>

@@ -5,18 +5,18 @@ export const StyledNav = styled.nav``;
 export const NavList = styled.ul`
   display: flex;
   flex-direction: column;
-  gap: ${({ theme }) => theme.spacing(7)};
+  gap: 18px;
 `;
 
 export const NavItem = styled.li`
   width: 100%;
   min-width: 250px;
-  height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: ${({ theme }) => theme.spacing(3)};
-  border-radius: ${({ theme }) => theme.spacing(2)};
+  padding: 11px;
+  padding-right: 8px;
+  border-radius: 8px;
   background-color: ${({ theme, isActive }) =>
     isActive ? theme.colors.primary : 'transparent'};
   color: ${({ theme, isActive }) =>
@@ -30,7 +30,7 @@ export const NavItem = styled.li`
 export const NavItemContent = styled.div`
   display: flex;
   align-items: center;
-  gap: ${({ theme }) => theme.spacing(3)};
+  gap: 14px;
 `;
 
 export const NavItemIcon = styled.svg`
@@ -38,7 +38,9 @@ export const NavItemIcon = styled.svg`
   fill: currentColor;
 `;
 
-export const NavItemText = styled.p``;
+export const NavItemText = styled.p`
+  line-height: ${({ theme }) => theme.lineHeight(21, 14)};
+`;
 
 export const NavItemArrow = styled.svg`
   display: inline-block;

@@ -6,3 +6,4 @@ export { default as User } from './User/User';
 export { default as Content } from './Content/Content';
 export { default as Table } from './Table/Table';
 export { default as Filter } from './Filter/Filter';
+export { default as Pagination } from './Pagination/Pagination';

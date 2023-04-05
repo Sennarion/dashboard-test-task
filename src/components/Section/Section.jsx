@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Table, Filter } from 'components';
+import { Table, Filter, Pagination } from 'components';
 import {
   StyledSection,
   SectionHeader,
@@ -8,8 +8,6 @@ import {
   SectionDescription,
   SectionFooter,
   FooterText,
-  PaginationList,
-  PaginationItem,
 } from './Section.styled';
 import { customers } from 'data/customers';
 
@@ -34,9 +32,7 @@ export default function Section() {
       <Table customers={filteredCustomers} />
       <SectionFooter>
         <FooterText>Showing data 1 to 8 of 256K entries</FooterText>
-        <PaginationList>
-          <PaginationItem></PaginationItem>
-        </PaginationList>
+        <Pagination />
       </SectionFooter>
     </StyledSection>
   );

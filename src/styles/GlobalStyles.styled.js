@@ -15,8 +15,9 @@ body {
   font-family: ${({ theme }) => theme.fonts.main};
   font-size: ${({ theme }) => theme.fontSizes.small};
   font-weight: ${({ theme }) => theme.fontWeight.medium};
+  line-height: ${({ theme }) => theme.lineHeight(21, 14)};
+  letter-spacing: ${({ theme }) => theme.letterSpacing.low};
   color: ${({ theme }) => theme.colors.primaryTextColor};
-  line-height: ${({ theme }) => theme.lineHeight.regular};
   background-color: ${({ theme }) => theme.colors.bgColor};
 }
 
