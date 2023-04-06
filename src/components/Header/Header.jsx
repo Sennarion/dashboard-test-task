@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Sling as Hamburger } from 'hamburger-react';
 import { theme } from 'styles/theme';
 import { Logo, Container, MobileNav } from 'components';
@@ -10,6 +10,15 @@ export default function Header() {
   const toggleMenu = () => {
     setIsMenuOpen(prev => !prev);
   };
+
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.documentElement.style.overflow = 'hidden';
+      return;
+    }
+
+    document.documentElement.style.overflow = 'auto';
+  }, [isMenuOpen]);
 
   return (
     <StyledHeader>
@@ -24,7 +33,7 @@ export default function Header() {
             rounded
           />
         </HeaderContent>
-        <MobileNav isOpen={isMenuOpen} />
+        <MobileNav isOpen={isMenuOpen} toggleMenu={toggleMenu} />
       </Container>
     </StyledHeader>
   );

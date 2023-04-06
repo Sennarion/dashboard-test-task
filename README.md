@@ -15,4 +15,5 @@ List of requirements for the project:
 - Search functionality that searches across all fields
 - Fast and accurate search results
 - Built using React library
-- Pagination is not required for this project.
+- Pagination is not required for this project
+- Routing is not required for this project.

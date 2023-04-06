@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import useMediaQuery from 'hooks/useMediaQuery';
+import { theme } from 'styles/theme';
 import {
   StyledNav,
   NavList,
@@ -11,8 +13,16 @@ import {
 import { nav } from 'data/nav';
 import icons from 'assets/icons/icons.svg';
 
-export default function Nav() {
+export default function Nav({ toggleMenu }) {
+  const isDesktop = useMediaQuery(`(min-width: ${theme.media.desktop})`);
+
   const [active, setActive] = useState(2);
+
+  const onNavClick = idx => {
+    setActive(idx);
+
+    if (!isDesktop) toggleMenu();
+  };
 
   return (
     <StyledNav>
@@ -21,7 +31,7 @@ export default function Nav() {
           <NavItem
             key={title}
             isActive={idx === active}
-            onClick={() => setActive(idx)}
+            onClick={() => onNavClick(idx)}
           >
             <NavItemContent>
               <NavItemIcon width="24" height="24">
