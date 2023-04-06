@@ -30,7 +30,7 @@ export default function Section() {
         <Filter setFilter={setFilter} />
       </SectionHeader>
       <MobileTable customers={filteredCustomers} />
-      {/* <Table customers={filteredCustomers} /> */}
+      <Table customers={filteredCustomers} />
       <SectionFooter>
         <FooterText>Showing data 1 to 8 of 256K entries</FooterText>
         <Pagination />

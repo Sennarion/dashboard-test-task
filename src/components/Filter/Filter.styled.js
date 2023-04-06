@@ -4,6 +4,7 @@ import searchIcon from 'assets/icons/search-icon.svg';
 export const StyledFilter = styled.div`
   position: relative;
   width: 100%;
+  max-width: 216px;
 
   &::before {
     content: '';
@@ -20,7 +21,6 @@ export const StyledFilter = styled.div`
   }
 
   @media screen and (min-width: ${({ theme }) => theme.media.desktop}) {
-    max-width: 216px;
     margin-right: 14px;
   }
 `;

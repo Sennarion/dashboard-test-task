@@ -43,14 +43,12 @@ export const theme = Object.freeze({
     normal: '0em',
     low: '-0.01em',
   },
-  spacing: value => `${4 * value}px`,
   animation: {
     cubicBezier: '0.2s cubic-bezier(0.7, 0.98, 0.86, 0.98)',
   },
   media: {
     mobile: '480px',
-    tablet: '768px',
-    desktop: '1280px',
+    desktop: '1440px',
   },
   shadows: {
     primaryShadow: '0px 10px 60px rgba(226, 236, 249, 0.5)',

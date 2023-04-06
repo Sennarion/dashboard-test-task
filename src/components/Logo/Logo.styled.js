@@ -29,5 +29,5 @@ export const LogoVersion = styled.span`
   line-height: ${({ theme }) => theme.lineHeight(15, 10)};
   letter-spacing: ${({ theme }) => theme.letterSpacing.low};
   color: ${({ theme }) => theme.colors.grey};
-  margin-left: ${({ theme }) => theme.spacing(1)};
+  margin-left: 4px;
 `;

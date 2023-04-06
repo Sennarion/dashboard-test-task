@@ -6,7 +6,7 @@ export const Menu = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  padding: ${({ theme }) => theme.spacing(4)} 0;
+  padding: 20px 0;
   background-color: ${({ theme }) => theme.colors.bgColor};
   z-index: 200;
   opacity: ${({ isOpen }) => (isOpen ? 1 : 0)};
@@ -21,6 +21,5 @@ export const Menu = styled.div`
 export const Content = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: ${({ theme }) => theme.spacing(10)};
+  gap: 40px;
 `;

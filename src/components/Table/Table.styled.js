@@ -1,12 +1,17 @@
 import styled from 'styled-components';
 
 export const StyledTable = styled.table`
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 30px;
-  font-weight: ${({ theme }) => theme.fontWeight.medium};
-  line-height: ${({ theme }) => theme.lineHeight(21, 14)};
-  letter-spacing: ${({ theme }) => theme.letterSpacing.low};
+  display: none;
+
+  @media screen and (min-width: ${({ theme }) => theme.media.desktop}) {
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    font-weight: ${({ theme }) => theme.fontWeight.medium};
+    line-height: ${({ theme }) => theme.lineHeight(21, 14)};
+    letter-spacing: ${({ theme }) => theme.letterSpacing.low};
+  }
 `;
 
 export const TableHead = styled.thead`

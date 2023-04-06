@@ -13,7 +13,7 @@ export default function MobileTable({ customers }) {
     <CustomersList>
       {customers.map(({ name, company, phone, email, country, status }) => {
         return (
-          <CustomerItem>
+          <CustomerItem key={phone} isActive={status === 'Active'}>
             <CustomerInfoList>
               <CustomerInfoItem>
                 <Label>Customer Name</Label>

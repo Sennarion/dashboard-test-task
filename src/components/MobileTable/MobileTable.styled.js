@@ -13,8 +13,12 @@ export const CustomersList = styled.ul`
 
 export const CustomerItem = styled.li`
   padding: 0 14px;
-  background-color: ${({ theme }) => theme.colors.secondaryTextColor};
   border-radius: 10px;
+  border: 1px solid;
+  border-color: ${({ theme, isActive }) =>
+    isActive
+      ? theme.colors.activeStatusBorderColor
+      : theme.colors.inactiveStatusBorderColor};
 `;
 
 export const CustomerInfoList = styled.ul``;
@@ -26,7 +30,7 @@ export const CustomerInfoItem = styled.li`
   padding: 10px 0;
 
   &:not(:last-child) {
-    border-bottom: 1px solid ${({ theme }) => theme.colors.white};
+    border-bottom: 1px solid ${({ theme }) => theme.colors.grey};
   }
 `;
 
